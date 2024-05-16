@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { TiStarFullOutline } from "react-icons/ti";
+
 
 const DetailsPage = () => {
     const detail = useSelector(state => state.detail.content);
@@ -10,7 +10,7 @@ const DetailsPage = () => {
         const stars = [];
         const roundedRating = Math.round(rating);
         for (let i = 0; i < roundedRating; i++) {
-            stars.push(<FontAwesomeIcon key={i} icon={faStar} className="text-xl text-yellow-500" />);
+            stars.push(<TiStarFullOutline  className="text-xl md:text-2xl text-yellow-500" />);
         }
         return stars;
     };
