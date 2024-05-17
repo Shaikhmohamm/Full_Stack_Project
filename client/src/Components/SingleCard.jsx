@@ -35,7 +35,7 @@ function SingleCard({ item, fieldType, removeItem }) {
         const handleBookmarkStatus = async () => {
           try {
             // Check if the authentication token cookie exists
-            const authToken = document.cookie.includes('your_auth_cookie_name_here');
+            const authToken = document.cookie.includes('UserAuth');
     
             if (authToken) {
               // If token exists, proceed with bookmark status check

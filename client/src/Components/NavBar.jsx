@@ -52,7 +52,8 @@ const NavBar = () => {
                         <button onClick={() => {
                             // if user is logged out redirect to sign up page 
                             if (!document.cookie) {
-                                navigate('/signup')
+                                successToast("Login First")
+                                navigate('/login')
                             }
                         }}>
                             <NavLink to="/bookmark" className={`text-2xl sm:text-3xl hover:text-white ${location.pathname === '/bookmark' && 'text-red-500'}`}>
