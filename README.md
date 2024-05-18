@@ -1,13 +1,14 @@
 # Entertainment App
 
-The Entertainment App is a full-stack application designed to provide users with access to a vast collection of movies and TV shows, leveraging the TMDB API for fetching media details. It features user authentication, media exploration, and personal bookmarks, offering a comprehensive and personalized media browsing experience.
+The Entertainment App is an app for users to get the trending movies and series. Also based on their liking user can add the movies and series to bookmark. Hence its a user centric app user can 
+navigate to movies and series page also user can search the respective movies and series.
 
 ## Features
 
 - **User Authentication**: Utilizes JWT for secure login and registration, ensuring user data protection.
 - **Media Exploration**: Allows users to discover trending movies and TV shows, with detailed views available for each media item.
 - **Bookmarks**: Enables users to bookmark their favorite media, creating a personalized list of favorites accessible at any time.
-- **Detailed Media Information**: Provides in-depth details about movies and TV shows, including cast, genres, ratings, and more.
+- **Detailed Media Information**: Provides in-depth details about movies and TV shows, including description, genres, ratings,  and more.
 
 ## Getting Started
 
@@ -16,18 +17,18 @@ The Entertainment App is a full-stack application designed to provide users with
 - Node.js (v14 or later)
 - npm (v6 or later)
 - MongoDB instance (local or remote)
-- TMDB API key for fetching media data
+- React.js
 
 ### Backend Setup
 
 1. **Clone the Repository**: Start by cloning the Entertainment App repository to your local machine.
    ```bash
-   git clone https://github.com/yourusername/entertainment-app.git
+   git clone https://github.com/Shaikhmohamm/Full_Stack_Project.git
    ```
    
 2. **Navigate to the Backend Directory**: Move into the `backend` directory of the project.
    ```bash
-   cd entertainment-app/backend
+   cd backend
    ```
 
 3. **Install Dependencies**: Install the necessary dependencies using npm.
@@ -37,14 +38,16 @@ The Entertainment App is a full-stack application designed to provide users with
 
 4. **Configure Environment Variables**: Create a `.env` file based on the provided `.env.example` file. Provide your MongoDB URI and TMDB API key in the `.env` file.
    ```bash
-    MONGODB_URL= "your mongodb url"
-    SECRET_TOKEN= "your secret token for user authentication"
-    TMDB_TOKEN= "your tmdb access token for tmdb media data"
+    SECRET_TOKEN="Your key"
+    PORT="Your port"
+    MONGO_URL="Your Mongo URL"
+
+
    ```
 
 5. **Start the Server**: Run the backend server.
    ```bash
-   npm start
+   node createDataBase.js && nodemon index.js/ node index.js
    ```
 
 6. **Verify Backend Setup**: Confirm that the backend server is running without any errors.
@@ -61,15 +64,11 @@ The Entertainment App is a full-stack application designed to provide users with
    npm install
    ```
 
-3. **Configure Environment Variables**: Create a `.env` file in the frontend directory and specify the URL of the backend server. For example:
-   ```bash
-   REACT_APP_BACKEND_URL= "your live backend server"
-   VITE_APP_TMDB_API_KEY= "your tmdb api key for image"
-   ```
 
-4. **Start the Application**: Run the frontend application.
+3. **Start the Application**: Run the frontend application.
+   ``` change the base URL in axiosInstace.js to the backend URL
    ```bash
-   npm run dev
+   npm run start
    ```
 
 5. **Access the Application**: Open your web browser and navigate to the specified URL (default: `http://localhost:3000`) to access the Entertainment App.
@@ -79,32 +78,30 @@ By following these steps, you should have both the backend server and frontend a
 
 ### Backend
 
-- **Controllers**: Contains logic for handling API requests, such as `DetailMediaController.js` for fetching detailed media information.
-- **Models**: Defines the schema for database collections, including Users and Bookmarks.
+- **Controllers**: Contains logic for handling API requests, such as `media.controller.js` for fetching detailed media information.
+- **Models**: Defines the schema for database collections, including Users, movies and tvseries.
 - **Routes**: API routes for handling requests to different endpoints.
 - **Middleware**: Includes middleware for authentication and error handling.
-- **Utils**: Helper functions for interacting with external APIs (`fetchDataUtils.js`) and customizing media response data (`customizeMediaResponse.js`).
+
 
 ### Frontend
 
-- **Components**: Reusable UI components like `SingleCard` for displaying media information.
-- **Pages**: React components representing pages (`Home.jsx`, `Login.jsx`, `SignUp.jsx`, `MovieDetail.jsx`, and `TvDetail.jsx`), utilizing hooks like `useParams` and services (`TmdbService.js`) for fetching media details.
-- **Services**: Functions for making API requests, including user authentication (`UserService.js`) and media data fetching (`TmdbService.js`).
-- **Store**: Redux setup for state management, including slices like `BookmarkSlice.js` for managing bookmarks.
-- **Utils**: Utility functions such as `cookieActionUtils.js` for managing cookies and `customToast.js` for displaying toast notifications.
+- **Components**: Reusable UI components like `SingleCard` and `DetailsPage` for displaying media information.
+- **Pages**: React components representing pages (`Home.jsx`, `Login.jsx`, `SignUp.jsx`), utilizing hooks like `useParams` and services (`TmdbService.js`) for fetching media details.
+- **Services**: Functions for making API requests, including user authentication (`UserService.js`).
+- **Store**: Redux setup for state management, including slices like `detailSlice.js` and `searchSlice.js` for managing bookmarks.
+- **Utils**: Utility functions such as `customToast.js` for displaying toast notifications.
 
 ### Deployment
-- **Frontend** : https://entertainment-app-frontend-110.onrender.com
-- **Backend** : https://entertainment-app-backend-110.onrender.com
+- **Frontend** : https://full-stack-project-eosin.vercel.app/
+- **Backend** : https://full-stack-project-entertainment-app.onrender.com
 
 ### API Documentation
-You can visit API documentation from [here](https://documenter.getpostman.com/view/29682764/2sA2xmVB3S)
+You can visit API documentation from [here]()
 
 ### Database Design
-You can visit Database Design from [here](https://docs.google.com/document/d/1iWpAIfILl7cN4DK83MJfC0teh3CVMQW79ts3X503EkQ/edit?usp=sharing)
+You can visit Database Design from [here]()
 
-## Note
-If tmdb api is not working then change your system dns according to [this](https://www.isitdownrightnow.com/themoviedb.org.html)
 
 ## Contributing
 
