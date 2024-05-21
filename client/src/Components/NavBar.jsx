@@ -49,13 +49,7 @@ const NavBar = () => {
                         <NavLink to="/tvseries" className={`text-2xl sm:text-3xl hover:text-white ${location.pathname === '/tvseries' && 'text-red-500'}`}>
                             <TbDeviceTvOld />
                         </NavLink>
-                        <button onClick={() => {
-                            // if user is logged out redirect to sign up page 
-                            if (!document.cookie) {
-                                successToast("Login First")
-                                navigate('/login')
-                            }
-                        }}>
+                        <button >
                             <NavLink to="/bookmark" className={`text-2xl sm:text-3xl hover:text-white ${location.pathname === '/bookmark' && 'text-red-500'}`}>
                                 <HiBookmark />
                             </NavLink>

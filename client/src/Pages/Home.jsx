@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axiosInstance from '../utils/axiosInstance.js';
 import SingleCard from '../Components/SingleCard'
-import { ProgressBar } from 'react-loader-spinner';
+import { RotatingLines } from 'react-loader-spinner';
 
 function Home() {
     // state for trending media
@@ -36,8 +36,8 @@ function Home() {
     return (
         <>
             {loading ? ( // If data is loading, render the ProgressBar
-                <div className="absolute top-0 w-full h-full flex items-center justify-center">
-                    <ProgressBar
+                <div className="absolute top-0 w-full h-full flex items-center justify-center bg-leanBlue">
+                    <RotatingLines
                         visible={true}
                         height="80"
                         width="80"

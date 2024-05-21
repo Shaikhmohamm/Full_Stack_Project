@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axiosInstance from '../utils/axiosInstance.js';
 import SingleCard from '../Components/SingleCard';
-import { ProgressBar } from 'react-loader-spinner';
+import { RotatingLines } from 'react-loader-spinner';
 
 const TvSeries = () => {
     const [tvseries, setTvSeries] = useState([]);
@@ -26,8 +26,8 @@ const TvSeries = () => {
     return (
         <>
             {loading ? ( // If data is loading, render the Hourglass spinner
-                <div className="absolute top-0 w-full h-full flex items-center justify-center">
-                    <ProgressBar
+                <div className="absolute top-0 w-full h-full flex items-center justify-center bg-leanBlue">
+                    <RotatingLines
                         height="80"
                         width="80"
                     />

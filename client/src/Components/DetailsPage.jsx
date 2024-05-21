@@ -16,7 +16,7 @@ const DetailsPage = () => {
     };
 
     return (
-        <div className="container mx-auto p-4 w-full h-full bg-black text-white flex flex-col justify-center lg:items-start items-center lg:flex-row gap-10">
+        <div className="container mx-auto p-4 w-full h-full bg-leanBlue text-white flex flex-col justify-center lg:items-start items-center lg:flex-row gap-10">
             <div className='lg:ml-10 w-64 h-80 md:w-1/2 lg:w-1/3 md:h-1/2 p-4'>
                 <img src={detail.big_image} alt={detail.title} className="w-full md:w-full h-full lg:rounded-xl" />
             </div>
