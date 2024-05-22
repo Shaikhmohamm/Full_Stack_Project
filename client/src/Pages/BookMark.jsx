@@ -37,9 +37,13 @@ const BookMark = () => {
     return (
         <div className="w-full h-full overflow-y-hidden overflow-x-hidden">
             {bookmarkmovie.length === 0 && bookmarkseries.length === 0 ? (
-                <div className="text-white text-center mt-8">
-                    <p>No bookmarked items found.</p>
-                    <Link to="/" className="text-blue-500 hover:underline">Go to main page</Link>
+                <div className="flex flex-col w-full h-screen bg-leanBlue text-white text-center mt-10 p-5">
+                    <p className='text-xl md:text-2xl lg:text-3xl mb-5'>No items bookmarked yet.</p>
+                    <Link to="/" >
+                        <button className="md:text-xl p-3 md:p-4 font-semibold bg-red-500 rounded-md mt-5">
+                            Go to main page
+                        </button>
+                    </Link>
                 </div>
             ) : (
                 <>

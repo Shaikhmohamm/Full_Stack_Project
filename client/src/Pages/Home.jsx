@@ -41,6 +41,7 @@ function Home() {
                         visible={true}
                         height="80"
                         width="80"
+                        strokeColor="red"
                     />
                 </div>
             ) : (

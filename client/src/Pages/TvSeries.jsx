@@ -30,6 +30,7 @@ const TvSeries = () => {
                     <RotatingLines
                         height="80"
                         width="80"
+                        strokeColor="red"
                     />
                 </div>
             ) : (

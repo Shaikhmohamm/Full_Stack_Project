@@ -32,6 +32,7 @@ const Movies = () => {
                     <RotatingLines
                         height="80"
                         width="80"
+                        strokeColor="red"
                     />
                 </div>
             
