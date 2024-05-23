@@ -35,7 +35,7 @@ const TvSeries = () => {
                 </div>
             ) : (
                     <div className='w-full'>
-                        <h1 className="text-xl md:text-3xl text-white font-semibold ml-5 mt-4 mb-4">Series for you</h1>
+                        <h1 className="text-xl md:text-3xl text-white font-semibold ml-5 mt-4 mb-4">Tv Series</h1>
                         <div className="mx-3 flex flex-wrap gap-6 justify-center">
                             {tvseries.map((item) => (
                                 <div key={item._id} className="flex-none w-[45%] md:w-[30%] lg:w-[23%] h-40 md:h-48 mb-12">
