@@ -17,19 +17,17 @@ const NavBar = () => {
     // function to logout user
     const logOutUser = async () => {
         try {
-            // Make a request to logout endpoint
+            
             const response = await axiosInstance.get('/user/logout', {
                 headers: {
                     "Content-Type": "application/json",
                     Authorization: document.cookie,
                 },
             });
-            console.log(response.data)
             // once the user logged out remove the cookie
             Cookies.remove('UserAuth');
         } catch (error) {
             console.error('Error logging out:', error);
-            // Handle any errors that occur during logout
         }
     }
     return (

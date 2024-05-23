@@ -87,8 +87,9 @@ By following these steps, you should have both the backend server and frontend a
 ### Frontend
 
 - **Components**: Reusable UI components like `SingleCard` and `DetailsPage` for displaying media information.
-- **Pages**: React components representing pages (`Home.jsx`, `Login.jsx`, `SignUp.jsx`), utilizing hooks like `useParams` and services (`TmdbService.js`) for fetching media details.
-- **Services**: Functions for making API requests, including user authentication (`UserService.js`).
+- **Pages**: React components representing pages (`Home.jsx`, `Login.jsx`, `SignUp.jsx`), utilizing hooks like `useParams` and `useNavigate` for fetching and navigating media details.
+- **Services**: Functions for making API requests, including adding and  
+removing bookmarks (`bookmark.service.js`).
 - **Store**: Redux setup for state management, including slices like `detailSlice.js` and `searchSlice.js` for managing bookmarks.
 - **Utils**: Utility functions such as `customToast.js` for displaying toast notifications.
 
@@ -112,4 +113,12 @@ Contributions are welcome! Please follow these steps to contribute:
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
 4. Push to the branch (`git push origin feature/AmazingFeature`).
 5. Open a Pull Request.
+
+
+## Contact
+
+For any inquiries or support, please contact us at 
+[GitHub](https://github.com/Shaikhmohamm) 
+[LinkedIn](https://www.linkedin.com/in/zaid-shaikh-37b1b6171/)
+
 

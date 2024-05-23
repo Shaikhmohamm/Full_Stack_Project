@@ -30,7 +30,7 @@ export const signup = async (req, res) => {
 		});
         await newUser.save();
 
-        // respomse after successful sign up
+        // response after successful sign up
         res.status(201).json({ message: 'User created successfully' , 
         success: true 
         });

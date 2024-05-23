@@ -1,11 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// Define initial state for the search slice
+
 const initialstate = {
     searchinput: [],
 }
 
-// Define a Redux slice named 'search' with initial state and a reducer function
+
 const search = createSlice({
     name: 'search',
     initialState: initialstate,

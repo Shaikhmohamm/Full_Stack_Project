@@ -21,8 +21,6 @@ const SignUp = () => {
         // Show success toast message
         successToast('User registered successfully');
       } else {
-        // Handle sign up failure
-        console.error(response.data.message);
         // Show error toast message
         errorToast(response.data.message);
       }

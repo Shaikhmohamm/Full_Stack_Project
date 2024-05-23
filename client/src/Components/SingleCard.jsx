@@ -19,7 +19,7 @@ function SingleCard({ item, fieldType, removeItem }) {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    // getting from redux store
+    // getting movies and series from redux store
     const movieData = useSelector(state => state.detail.moviebookmarkdata)
     const seriesData = useSelector(state => state.detail.seriesbookmarkdata)
 
@@ -30,7 +30,7 @@ function SingleCard({ item, fieldType, removeItem }) {
     const [isAuth, setIsAuth] = useState(true);
 
 
-    // dispatching to redux store using use effect
+    // function for dispatching to redux store using use effect
     useEffect(() => {
         const handleBookmarkStatus = async () => {
           try {
@@ -104,9 +104,8 @@ function SingleCard({ item, fieldType, removeItem }) {
             if (isBookmarked) {
                 const data = await removeBookMark(id, mediaType);
                 if (data.success) {
-                    successToast('Removed from bookmark'); // Show toast message
-                    setIsBookmarked(false); // Update state to remove the bookmarked card
-                    // Call removeItem function to remove the item from the bookmark list in the parent component
+                    successToast('Removed from bookmark');
+                    setIsBookmarked(false); 
                     removeItem(id);
                     
                 } else {
@@ -115,8 +114,8 @@ function SingleCard({ item, fieldType, removeItem }) {
             } else {
                 const data = await addToBookMark(mediaType, id);
                 if (data.success) {
-                    setIsBookmarked(true); // Update state to add the bookmarked card
-                    successToast('Added to bookmark'); // Show toast message
+                    setIsBookmarked(true);
+                    successToast('Added to bookmark'); 
                 } else {
                     console.log('error occurred');
                 }

@@ -35,7 +35,7 @@ function Home() {
 
     return (
         <>
-            {loading ? ( // If data is loading, render the ProgressBar
+            {loading ? ( // If data is loading, render the RotatingLines
                 <div className="absolute top-0 w-full h-full flex items-center justify-center bg-leanBlue">
                     <RotatingLines
                         visible={true}

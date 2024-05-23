@@ -5,7 +5,7 @@ import { RotatingLines } from 'react-loader-spinner';
 
 const TvSeries = () => {
     const [tvseries, setTvSeries] = useState([]);
-    const [loading, setLoading] = useState(true); // State to track loading status
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchTvSeriesData = async () => {
@@ -15,7 +15,7 @@ const TvSeries = () => {
             } catch (error) {
                 console.error('Error fetching TV series data:', error);
             } finally {
-                setLoading(false); // Set loading state to false when fetching is complete
+                setLoading(false); 
             }
         };
         setTimeout(()=>{
@@ -25,7 +25,7 @@ const TvSeries = () => {
 
     return (
         <>
-            {loading ? ( // If data is loading, render the Hourglass spinner
+            {loading ? ( // If data is loading, render the RotatingLines spinner
                 <div className="absolute top-0 w-full h-full flex items-center justify-center bg-leanBlue">
                     <RotatingLines
                         height="80"

@@ -24,9 +24,9 @@ function App() {
       <div className='w-full h-full bg-leanBlue'>
         {!isLoginPage && !isSignUpPage && !isDetailsPage && <SearchBar />}
         <Toaster
-          position="top-right" // Position the toast container at the top right
-          reverseOrder={false} // Keep the newest toasts at the top
-          gutter={8} // Add some space between toasts
+          position="top-right" 
+          reverseOrder={false} 
+          gutter={8}
         />
         <Routes>
           <Route path='/' element={<Home />} />

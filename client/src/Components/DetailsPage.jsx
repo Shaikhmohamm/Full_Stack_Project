@@ -4,8 +4,10 @@ import { TiStarFullOutline } from "react-icons/ti";
 
 
 const DetailsPage = () => {
+    // Getting the detail from redux-store
     const detail = useSelector(state => state.detail.content);
 
+    // function for generating stars for rating
     const renderStarRating = (rating) => {
         const stars = [];
         const roundedRating = Math.round(rating);

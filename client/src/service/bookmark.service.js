@@ -32,7 +32,7 @@ export const removeBookMark = async (id) => {
     try {
         response = await axiosInstance.delete(`/bookmark/remove/${id}`, {
             headers: {
-                Authorization: document.cookie, // Assuming you're passing the authorization token in cookies
+                Authorization: document.cookie,
             }
         });
 
