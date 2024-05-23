@@ -39,6 +39,7 @@ function App() {
           <Route path="/search/multi" element={<MultiSearch />} />
           <Route path="/search/movies" element={<MultiSearch />} />
           <Route path="/search/tvseries" element={<MultiSearch />} />
+          <Route path="/search/bookmark" element={<MultiSearch />} />
         </Routes>
       </div>
     </div>
