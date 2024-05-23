@@ -97,10 +97,10 @@ By following these steps, you should have both the backend server and frontend a
 - **Backend** : https://full-stack-project-entertainment-app.onrender.com
 
 ### API Documentation
-You can visit API documentation from [here]()
+You can visit API documentation from [here](https://documenter.getpostman.com/view/32824294/2sA3QmCZSu)
 
 ### Database Design
-You can visit Database Design from [here]()
+You can visit Database Design from [here](https://docs.google.com/document/d/1VjPurcuGqLSsDmOn8oKzL9JNr93ChpLsPByqrOxPsjI/edit#heading=h.57fwjvuift4u)
 
 
 ## Contributing
